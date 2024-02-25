@@ -1,0 +1,213 @@
+################################ USERS    ####################################################################
+### register new user
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+   
+    "username":"cn",
+    "email":"cinove6282@tospage.com",
+    "tagname":"isaackilimok2",
+    "password":"12345678"
+}
+
+### login
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+   "email":"cinove6282@tospage.com",
+   "password":"12345678"
+}
+
+###get all users
+GET http://localhost:3000/api/user
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
+### get one user
+GET http://localhost:3000/api/user/1d2b805f-485c-407b-9b49-7c36cf8b958c
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### update one user
+PATCH http://localhost:3000/api/user/1d2b805f-485c-407b-9b49-7c36cf8b958c
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
+  {
+
+    "username": "testsk1-user@example.com",
+    "email": "testsk@gmail.com",
+    "tagname": "sk2"
+  
+    
+  }
+### delete user
+DELETE   http://localhost:3000/api/user/1d2b805f-485c-407b-9b49-7c36cf8b958c
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwODQxMTkyNSwiZXhwIjoxNzA4NDU1MTI1fQ.pxOOxcG-GHKpuzR8xE3cXtETE2cmsU11_1T_btmuh0w
+
+
+################################ POST  ######################################################################################################
+
+### create post
+POST http://localhost:3000/api/post
+Content-Type: application/json
+Authorization:JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwODQxMTkyNSwiZXhwIjoxNzA4NDU1MTI1fQ.pxOOxcG-GHKpuzR8xE3cXtETE2cmsU11_1T_btmuh0w
+
+{
+  
+  "content":"New post from ",
+  "image":"www.photo.url"
+}
+### get all posts
+GET  http://localhost:3000/api/post   
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDg0MTE1MDYsImV4cCI6MTcwODQ1NDcwNn0.g3wsnuIY6p2oJUpVgJKAwYirOKwnPsxxBon0M7AW6dE
+### get one post
+GET http://localhost:3000/api/post/01b4733b-58ca-4129-9300-787d1e527858
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwODQxMTkyNSwiZXhwIjoxNzA4NDU1MTI1fQ.pxOOxcG-GHKpuzR8xE3cXtETE2cmsU11_1T_btmuh0w
+### update a post
+PATCH  http://localhost:3000/api/post/01b4733b-58ca-4129-9300-787d1e527858
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwODQxMTkyNSwiZXhwIjoxNzA4NDU1MTI1fQ.pxOOxcG-GHKpuzR8xE3cXtETE2cmsU11_1T_btmuh0w
+
+{
+  "content":"This is an updated post"
+}
+
+### delete a post
+DELETE  http://localhost:3000/api/post/01b4733b-58ca-4129-9300-787d1e527858
+Authorization:  JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwODQxMTkyNSwiZXhwIjoxNzA4NDU1MTI1fQ.pxOOxcG-GHKpuzR8xE3cXtETE2cmsU11_1T_btmuh0w
+### create a new group
+POST http://localhost:3000/api/group
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
+{   "group_name":"Wakadinali3 group",
+     "group_description":"description"
+    
+    
+}
+
+### get all groups
+GET http://localhost:3000/api/group
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### get a group by id
+GET http://localhost:3000/api/group/1a4a6b33-494a-42fe-a8b5-67aa11fd618c
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### update group details
+
+PATCH  http://localhost:3000/api/group/00c0d988-2535-4908-80b5-da9a436cbdd0
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
+{   
+    "group_name":"uPDATED  group",
+     "group_description":"description UPDATED"
+    
+    
+}
+### delete a group
+DELETE  http://localhost:3000/api/group/00c0d988-2535-4908-80b5-da9a436cbdd0
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNjQ3NjAsImV4cCI6MTcwODM3MTk2MH0.fOFVrN8dHugw1rC_FwF8E39-09TAi5rEH5c2xWXJJh4
+
+### create event
+POST http://localhost:3000/event
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
+{
+  "event_name":"Sambaland",
+  "event_description":"My first event",
+  "location":"Nairobi"
+}
+
+### get all events
+GET  http://localhost:3000/event
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### get an evenet by id
+GET  http://localhost:3000/event/ba353081-eb57-4af6-bfca-938525a6c592
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
+### update an event
+PUT  http://localhost:3000/event/64f8913e-8bfa-4f4b-966b-710ca14901c6
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
+{
+    "event_name": "updated event name",
+    "event_description": "updated event description",
+    "location": "Nairobi, Kenya, Africa",
+    "event_date": "2024/12/02",
+    "event_poster_url": "poster image updated"
+}
+
+###delete the event
+DELETE http://localhost:3000/event/0c3d94d3-00ed-49cc-907c-753bce79b28a
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### register user for an event
+POST http://localhost:3000/event/attendees/c920d782-a40f-46b9-b9ab-72acf28750d3
+Content-Type:application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzMTQyMzUsImV4cCI6MTcwODMyMTQzNX0.hFB-NaQA6LpYpOVXdSFxRjz_iKJldD33RczS1pNkQsk
+
+
+### get all event attendees
+GET http://localhost:3000/event/attendees/ba353081-eb57-4af6-bfca-938525a6c592
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
+### new message
+
+POST http://localhost:3000/message/new
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzMTQyMzUsImV4cCI6MTcwODMyMTQzNX0.hFB-NaQA6LpYpOVXdSFxRjz_iKJldD33RczS1pNkQsk
+
+{      "content":"Hello",
+       "receiver_id":"2b075075-396b-492f-90c7-50aa1668ba3b"
+}
+
+###  get messages from a sender
+GET http://localhost:3000/message/295bcb46-7476-4338-896d-6208a3b9601e
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### delete messages from a receiver
+DELETE http://localhost:3000/message/295bcb46-7476-4338-896d-6208a3b9601e
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### fetch all members of a group
+GET http://localhost:3000/group-members/073e816f-b75c-4ebf-beb4-d8593e676e70
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### addd a member to a group
+POST http://localhost:3000/group-members/073e816f-b75c-4ebf-beb4-d8593e676e70
+Content-Type:application/json
+Authorization:JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzMzYwMjksImV4cCI6MTcwODM0MzIyOX0.rna4vVh27VDKSMssMS94Fajj-Cx4gXL71tlMjSU6pIg
+### remove a member from a group
+DELETE http://localhost:3000/group-members/073e816f-b75c-4ebf-beb4-d8593e676e70
+Content-Type:application/json
+
+{
+
+  "member_id":"2b075075-396b-492f-90c7-50aa1668ba3b"
+
+}
+
+### add comment
+POST http://localhost:3000/comment/2c733200-dab9-4b1e-862f-de9733b0a593
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzMTQyMzUsImV4cCI6MTcwODMyMTQzNX0.hFB-NaQA6LpYpOVXdSFxRjz_iKJldD33RczS1pNkQsk
+
+{
+    
+  
+  "content":"nice pic, This is steve's comment "
+          
+}
+
+### get comment of a post
+GET http://localhost:3000/comment/2c733200-dab9-4b1e-862f-de9733b0a593
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### delete comment
+DELETE http://localhost:3000/comment/07cf18db-0a1a-4ea5-b375-7868c2f60e1d
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+### follow other user
+POST http://localhost:3000/friendship/00811ba5-86be-46ca-b5ca-1c85d8fc1a75
+Content-Type: application/json
+Authorization:JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzMDQxNDIsImV4cCI6MTcwODMxMTM0Mn0.NkMFCc8cHN0TaS0XgLuDfhV4p8SmvEhjZ6s89Tp2L-4
+### get all friends
+GET http://localhost:3000/friendship
+Content-Type: application/json
+Authorization:JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzMDUwNjgsImV4cCI6MTcwODMxMjI2OH0.H-Bit_zZL8KYtfqPrJuQE-34GUWaqUySvm-opR8G5lI
