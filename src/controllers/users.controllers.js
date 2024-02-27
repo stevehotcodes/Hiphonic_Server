@@ -117,7 +117,7 @@ export const deleteUser=async(req,res)=>{
     }
     
    } catch (error) {
-    console.log(error)
+    // console.log(error)
    }
 }
 
@@ -133,8 +133,12 @@ export const loginUser = async (req, res) => {
                 // notAuthorized(res, userResponse.error);
                 return res.status(400).json(userResponse.error)
             } else {
+
+              console.log(userResponse)
+              return   res.status(200).send(userResponse);
                 console.log(userResponse)
                return  res.status(200).json({user:userResponse.user, token:userResponse.token});
+
             }
         } catch (error) {
             sendServerError(res, error.message)

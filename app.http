@@ -1,4 +1,5 @@
 ################################ USERS    ####################################################################
+
 ### register new user
 POST http://localhost:3000/api/user
 Content-Type: application/json
@@ -22,15 +23,21 @@ Content-Type: application/json
 
 ###get all users
 GET http://localhost:3000/api/user
+
 Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwOTAzMDcyNCwiZXhwIjoxNzA5MDczOTI0fQ.P4V1Zldswqi6_uI8nBqvatTJ9CJlghfv0ycoGe4i3dA
 
 ### get one user
 GET http://localhost:3000/api/user/2aa993f6-05d1-441b-91eb-6c475a4d3fe1
 Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwOTAzMDcyNCwiZXhwIjoxNzA5MDczOTI0fQ.P4V1Zldswqi6_uI8nBqvatTJ9CJlghfv0ycoGe4i3dA
+
+
+### get one user
+GET http://localhost:3000/api/user/1d2b805f-485c-407b-9b49-7c36cf8b958c
+
+
 ### update one user
 PATCH http://localhost:3000/api/user/1d2b805f-485c-407b-9b49-7c36cf8b958c
 Content-Type: application/json
-Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
 
   {
 
