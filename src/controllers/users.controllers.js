@@ -31,8 +31,10 @@ export const registerUser=async (req,res)=>{
         let response=await addUserService(newUser);
       //   logger.info(response)
 
-        if (response.rowsAffected){
-          return res.status(201).send({message:"User created successfully"})
+        if (response.rowsAffected>0){
+          console.log("user created successfully")
+          return res.status(201).json({message:"User created successfully"})
+          
         }
 
         }
@@ -115,7 +117,7 @@ export const deleteUser=async(req,res)=>{
     }
     
    } catch (error) {
-    console.log(error)
+    // console.log(error)
    }
 }
 
@@ -131,8 +133,12 @@ export const loginUser = async (req, res) => {
                 // notAuthorized(res, userResponse.error);
                 return res.status(400).json(userResponse.error)
             } else {
+
               console.log(userResponse)
               return   res.status(200).send(userResponse);
+                console.log(userResponse)
+               return  res.status(200).json({user:userResponse.user, token:userResponse.token});
+
             }
         } catch (error) {
             sendServerError(res, error.message)

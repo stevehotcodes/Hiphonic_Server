@@ -10,7 +10,7 @@ dotenv.config()
 
 export const mailOptions = {
     from: process.env.EMAIL,
-    to: 'StephenOndieki@teach2give.com',
+    to: 'simogatuma21@gmail.com',
     subject: 'WELCOME TO HIPHONIC SOCIAL MEDIA!',
     html : emailTemp
 };

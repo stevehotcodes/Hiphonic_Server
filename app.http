@@ -1,4 +1,5 @@
 ################################ USERS    ####################################################################
+
 ### register new user
 POST http://localhost:3000/api/user
 Content-Type: application/json
@@ -16,21 +17,19 @@ POST http://localhost:3000/api/login
 Content-Type: application/json
 
 {
-   "email":"cinove6282@tospage.com",
+   "email":"@tospage.comcinove6282",
    "password":"12345678"
 }
 
 ###get all users
 GET http://localhost:3000/api/user
-Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
 
 ### get one user
 GET http://localhost:3000/api/user/1d2b805f-485c-407b-9b49-7c36cf8b958c
-Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+
 ### update one user
 PATCH http://localhost:3000/api/user/1d2b805f-485c-407b-9b49-7c36cf8b958c
 Content-Type: application/json
-Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
 
   {
 
@@ -78,9 +77,9 @@ Authorization:  JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJ
 ### create a new group
 POST http://localhost:3000/api/group
 Content-Type: application/json
-Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwODkxNTEyMCwiZXhwIjoxNzA4OTU4MzIwfQ.bimyBqCErWhWRvpVpd3sREeP4g2GT4FmLrFk-Ho90zw
 
-{   "group_name":"Wakadinali3 group",
+{   "group_name":"group one",
      "group_description":"description"
     
     
@@ -88,10 +87,10 @@ Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkz
 
 ### get all groups
 GET http://localhost:3000/api/group
-Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwODkxNTEyMCwiZXhwIjoxNzA4OTU4MzIwfQ.bimyBqCErWhWRvpVpd3sREeP4g2GT4FmLrFk-Ho90zw
 ### get a group by id
 GET http://localhost:3000/api/group/1a4a6b33-494a-42fe-a8b5-67aa11fd618c
-Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRmZGJmNjctMTM2ZC00NDhhLWE0OWUtMjZkZTY1OTEzNDc3IiwidXNlcm5hbWUiOiJjbiIsImVtYWlsIjoiY2lub3ZlNjI4MkB0b3NwYWdlLmNvbSIsImlhdCI6MTcwODkxNTEyMCwiZXhwIjoxNzA4OTU4MzIwfQ.bimyBqCErWhWRvpVpd3sREeP4g2GT4FmLrFk-Ho90zw
 ### update group details
 
 PATCH  http://localhost:3000/api/group/00c0d988-2535-4908-80b5-da9a436cbdd0
