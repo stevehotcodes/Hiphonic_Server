@@ -47,7 +47,7 @@ export const  getOneUserService=async(user_id)=>{
     try{
          const result =await poolRequest()
          .input('user_id',sql.VarChar,user_id)
-         .query(`SELECT user_id, username,email,tagname FROM tbl_user WHERE user_id=@user_id`);
+         .query(`SELECT user_id, username,email,tagname,location FROM tbl_user WHERE user_id=@user_id`);
          return result.recordset
     }
     catch(error){

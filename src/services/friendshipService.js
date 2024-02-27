@@ -25,7 +25,7 @@ export const  getAllFollowersService=async(follower_id)=>{
         const response=await poolRequest()
         .input('follower_id',sql.VarChar,follower_id)
             .query(` 
-                    SELECT friendship.*, tbl_user.user_id,tbl_user.email,tbl_user.tagname
+                    SELECT friendship.*, tbl_user.user_id,tbl_user.email,tbl_user.tagname,tbl_user.username
                     FROM friendship 
                     INNER JOIN  tbl_user ON tbl_user.user_id=friendship.following_id
                     WHERE friendship.follower_id='2aa993f6-05d1-441b-91eb-6c475a4d3fe1'
