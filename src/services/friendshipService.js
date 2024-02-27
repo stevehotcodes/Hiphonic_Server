@@ -28,7 +28,7 @@ export const  getAllFollowersService=async(follower_id)=>{
                     SELECT friendship.*, tbl_user.user_id,tbl_user.email,tbl_user.tagname,tbl_user.username
                     FROM friendship 
                     INNER JOIN  tbl_user ON tbl_user.user_id=friendship.following_id
-                    WHERE friendship.follower_id='2aa993f6-05d1-441b-91eb-6c475a4d3fe1'
+                    WHERE friendship.follower_id=@follower_id
 
                  `)
         return  response.recordset
