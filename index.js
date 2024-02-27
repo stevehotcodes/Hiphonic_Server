@@ -1,4 +1,4 @@
-import Express from 'express'
+import express from 'express'
 import dotenv from 'dotenv'
 import userRouter from './src/routes/users.route.js'
 import bodyParser from 'body-parser'
@@ -11,13 +11,17 @@ import groupMemberRouter from './src/routes/groupMembersRoutes.js'
 import commentRouter from './src/routes/commentRoutes.js'
 import friendshipRouter from './src/routes/friendshipRoute.js'
 import cron from 'node-cron'
+import cors from 'cors'
+
 import { sendWelcomeEmailToNewUsers } from './src/config/mailConfig.js'
+
 dotenv.config()
 
 
 
-const app =Express()
-const port = process.env.PORT || 3000
+const app =express()
+const port = process.env.API_PORT || 3000
+app.use (cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
