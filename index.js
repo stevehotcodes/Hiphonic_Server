@@ -12,6 +12,7 @@ import commentRouter from './src/routes/commentRoutes.js'
 import friendshipRouter from './src/routes/friendshipRoute.js'
 import cron from 'node-cron'
 import { sendWelcomeEmailToNewUsers } from './src/config/mailConfig.js'
+import cors from 'cors'
 dotenv.config()
 
 
@@ -21,10 +22,11 @@ const port = process.env.PORT || 3000
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors())
 
 //health route
 app.get('/health',(req,res)=>{
-    res.status(200).json({message:'Hello everyone .....I am healthy😀'})
+    res.status(200).json({message:'Hello everyone .....I am happy'})
 })
 
 
