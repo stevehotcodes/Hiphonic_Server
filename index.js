@@ -16,6 +16,8 @@ import cors from 'cors'
 
 import { sendWelcomeEmailToNewUsers } from './src/config/mailConfig.js'
 
+import cors from 'cors'
+
 dotenv.config()
 
 
@@ -27,9 +29,10 @@ app.use (cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors())
+
 //health route
 app.get('/health',(req,res)=>{
-    res.status(200).json({message:'Hello everyone .....I am healthy😀'})
+    res.status(200).json({message:'Hello everyone .....I am happy'})
 })
 
 
