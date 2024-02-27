@@ -31,8 +31,10 @@ export const registerUser=async (req,res)=>{
         let response=await addUserService(newUser);
       //   logger.info(response)
 
-        if (response.rowsAffected){
-          return res.status(201).send({message:"User created successfully"})
+        if (response.rowsAffected>0){
+          console.log("user created successfully")
+          return res.status(201).json({message:"User created successfully"})
+          
         }
 
         }
