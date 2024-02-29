@@ -84,7 +84,7 @@ export const getOneUser=async(req, res)=>{
 
 export const updateUserDetails=async(req,res)=>{
    try {
-         let user_id=req.params.user_id;
+         let user_id=req.user.user_id;
         
          const user={
             
@@ -99,6 +99,12 @@ export const updateUserDetails=async(req,res)=>{
          
          let response=await updateUserDetailsService(user_id,user);
          console.log(response)
+
+         if (response.rowsAffected>0){
+          console.log("user updated successfully")
+          return res.status(200).json({message:"User updated successfully"})
+          
+        }
 
     
    } catch (error) {

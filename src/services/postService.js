@@ -115,3 +115,13 @@ export const deleteAPostService =async(post_id)=>{
 
 }
 
+
+export const likePost=async(post_id)=>{
+    try {
+
+        
+        
+    } catch (error) {
+        
+    }
+}

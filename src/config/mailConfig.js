@@ -1,4 +1,4 @@
-import emailTemp from "../Templates/emailTemp.js";
+ import emailTemp from "../Templates/emailTemp.js";
 import { transporter } from "../middlewares/mailTransporter.js";
 import dotenv from 'dotenv'
 
