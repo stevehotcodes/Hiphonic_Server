@@ -233,3 +233,24 @@ DELETE http://localhost:3000/notification/30f5ca48-a803-463c-a2aa-8247250e3d66
 Content-Type: application/json
 Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZjNDFlZDEtZWZiMC00M2E5LWE3MjgtYzA4ZDlkNGQ0YjNhIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDkxMjI0NzAsImV4cCI6MTcwOTE2NTY3MH0.y5BQY2RXYSB9BNcVYR5YE9R7vfgHGrf6Zb92Gxmc3OY
 
+#################################photos########################3333
+###get photos
+GET http://localhost:3000/photos
+
+#### upload photos
+POST http://localhost:3000/photos
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInoR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZjNDFlZDEtZWZiMC00M2E5LWE3MjgtYzA4ZDlkNGQ0YjNhIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDkyMDgyMjEsImV4cCI6MTcwOTI1MTQyMX0.dNhPKzeM9Z41Gvjg6J0W7gAjWbbRv2-J8_kT42fXIEo
+################################Vide0s ###############################33
+###get videos
+GET http://localhost:3000/video
+###### upload video
+
+POST http://localhost:3000/video
+Content-Type:application/json
+Authorization:JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZjNDFlZDEtZWZiMC00M2E5LWE3MjgtYzA4ZDlkNGQ0YjNhIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDkyMzQ5MzIsImV4cCI6MTcwOTI3ODEzMn0.0P2Qx_okIs0VJTeZazyna3xBIFnQIZb8Xj5rChwpDpY
+
+{
+   "video_descritpion":"video_description",
+   "video_url":"www.video.com "
+}
