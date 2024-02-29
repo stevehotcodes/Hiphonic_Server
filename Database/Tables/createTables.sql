@@ -94,3 +94,19 @@ id VARCHAR (300) PRIMARY KEY,
 group_id VARCHAR (300) FOREIGN KEY REFERENCES tbl_group(group_id),
 member_id VARCHAR(300) FOREIGN KEY REFERENCES tbl_user(user_id)
 );
+
+--create a notification table 
+CREATE TABLE group_member (
+    id VARCHAR (300) PRIMARY KEY,
+    user_id VARCHAR(300) FOREIGN KEY REFERENCES tbl_user(user_id),
+    post_id VARCHAR(300) FOREIGN KEY REFERENCES post(post_id)
+    
+)
+
+---create a video table
+CREATE TABLE video(
+video_id VARCHAR(300) PRIMARY KEY,
+video_description VARCHAR(MAX) DEFAULT 'no description',
+uploaded_on DATETIME DEFAULT GETDATE(),
+user_id VARCHAR(300) FOREIGN KEY REFERENCES tbl_user(user_id)
+)
