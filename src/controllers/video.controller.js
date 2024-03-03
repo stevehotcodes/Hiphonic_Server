@@ -1,12 +1,8 @@
 import { sendBadRequest, sendCreated, sendNotFound, sendServerError } from "../helpers/helper.function.js";
 import { fetchVideoService, uploadVideoService } from "../services/videoServices.js";
 
-
-
-
-
-
 export const uploadVideo=async(req,res)=>{
+  console.log("called");
     try {
           const user_id=req.user.user_id;
           const videoDetails={
@@ -14,9 +10,7 @@ export const uploadVideo=async(req,res)=>{
             video_url:req.body.video_url,
             user_id:user_id
           }
-
           const result =await uploadVideoService(videoDetails)
-          console.log(result)
           if(result.rowsAffected>0){
             sendCreated(res,'Video uploaded successfully')
           }

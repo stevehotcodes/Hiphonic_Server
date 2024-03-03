@@ -5,10 +5,10 @@ export const uploadVideoService=async(videoDetails)=>{
     try {
           const video_id=uuid.v4();
           const response=await poolRequest()
-          .input('video_id',sql.VarChar,video_id)
-          .input('video_description',sql.VarChar,videoDetails.video_description)
-          .input('user_id',sql.VarChar,videoDetails.user_id)
-          .input('video_url',sql.VarChar,videoDetails.video_url)
+            .input('video_id',sql.VarChar,video_id)
+            .input('video_description',sql.VarChar,videoDetails.video_description)
+            .input('user_id',sql.VarChar,videoDetails.user_id)
+            .input('video_url',sql.VarChar,videoDetails.video_url)
      
           .query(`
                 INSERT INTO video (video_id,video_description,user_id,video_url)

@@ -17,7 +17,7 @@ POST http://localhost:3000/api/login
 Content-Type: application/json
 
 {
-   "email":"ondiekistephen00@gmail.com",
+   "email":"kwakaba06@gmail.com",
    "password":"12345678"
 }
 
@@ -248,7 +248,7 @@ GET http://localhost:3000/video
 
 POST http://localhost:3000/video
 Content-Type:application/json
-Authorization:JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZjNDFlZDEtZWZiMC00M2E5LWE3MjgtYzA4ZDlkNGQ0YjNhIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDkyMzQ5MzIsImV4cCI6MTcwOTI3ODEzMn0.0P2Qx_okIs0VJTeZazyna3xBIFnQIZb8Xj5rChwpDpY
+Authorization:JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZjhjYjg1ZDItN2NjNi00NzI4LWExNTMtZDIyNTIyZTgzMjhiIiwidXNlcm5hbWUiOiJrayIsImVtYWlsIjoia3dha2FiYTA2QGdtYWlsLmNvbSIsImlhdCI6MTcwOTQ4MTQ0MSwiZXhwIjoxNzA5NTI0NjQxfQ.YP4bFBpheb0v6qUA9i5Acb_E8wjC67kxPvgzkC4BM_o
 
 {
    "video_descritpion":"video_description",
