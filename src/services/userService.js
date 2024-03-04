@@ -116,7 +116,8 @@ export const findByCredentialsService = async (user) => {
                         username: userFoundResponse.recordset[0].username,
                         email: userFoundResponse.recordset[0].email
                     },
-                "secret", { expiresIn: "12h" } 
+
+                    'secret', { expiresIn: "12h" } 
                 );
                 const { password, ...user } = userFoundResponse.recordset[0];
                 console.log('user deatails:',user)

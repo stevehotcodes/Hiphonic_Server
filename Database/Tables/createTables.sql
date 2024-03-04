@@ -107,6 +107,7 @@ CREATE TABLE group_member (
 CREATE TABLE video(
 video_id VARCHAR(300) PRIMARY KEY,
 video_description VARCHAR(MAX) DEFAULT 'no description',
+video_url VARCHAR(),
 uploaded_on DATETIME DEFAULT GETDATE(),
 user_id VARCHAR(300) FOREIGN KEY REFERENCES tbl_user(user_id)
 )
