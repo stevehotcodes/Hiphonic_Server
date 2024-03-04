@@ -8,7 +8,8 @@ export const eventValidator=(event)=>{
     const eventDetailsSchema=joi.object({
         event_name:joi.string().required(),
         event_description:joi.string().required(),
-        location:joi.string().required()
+        location:joi.string().required(),
+        event_poster_url:joi.string().required()
     })
     return eventDetailsSchema.validate(event)
 }

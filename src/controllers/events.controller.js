@@ -8,16 +8,17 @@ import { getOneUserService } from "../services/userService.js";
 
 export const createEvent=async(req,res)=>{
     try {
-        const eventFromDbRessponse=await g
+       
         const event={
              event_name:req.body.event_name,
              event_description:req.body.event_description,
-             location:req.body.location
+             location:req.body.location,
+             event_poster_url:req.body.event_poster_url
 
 
         }
-
-        const{error}=eventValidator(event)
+console.log(event);
+        const{error}=await eventValidator(event)
         if(error){
             return sendBadRequest(res,error.details[0].message)
          }
@@ -169,18 +170,20 @@ export const addEventAttendee=async(req,res)=>{
                 
                 //user in the event attendee table 
                 const eventAttendeeDetails=await getOneEventFromAttendeeTable(event_id);
-                console.log("event from the attendee table ",eventAttendeeDetails,attendee_id)
+                console.log("event from the attendee table ",eventAttendeeDetails)
+                console.log(attendee_id)
                 
-                if(attendee_id==eventAttendeeDetails[0].attendee_id){
-                    sendBadRequest(res, "You already registered for the event")
-                }
-
-                else{
+                // if(attendee_id===eventAttendeeDetails[0].attendee_id){
+                //     sendBadRequest(res, "You already registered for the event")
+                // }
+                
+                
                     const result =await registerEventService(eventDetails);
                     logger.info(result)
                     sendSuccess(res,"You registered for the event")
-
-                }
+                    
+                    
+                
                 
             }
             
