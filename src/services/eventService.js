@@ -12,9 +12,10 @@ export const createEventService=async(event)=>{
         .input("event_name",sql.VarChar,event.event_name)
         .input("event_description",sql.VarChar,event.event_description)
         .input("location", sql.VarChar,event.location)
+        .input("event_poster_url", sql.VarChar,event.event_poster_url)
         .query(`
-               INSERT INTO tbl_event(event_id,event_name,event_description,location)
-               VALUES(@event_id,@event_name,@event_description,@location);           
+               INSERT INTO tbl_event(event_id,event_name,event_description,location,event_poster_url)
+               VALUES(@event_id,@event_name,@event_description,@location,@event_poster_url);           
         
         `)
         return result                
