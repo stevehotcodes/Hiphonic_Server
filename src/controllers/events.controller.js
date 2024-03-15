@@ -1,4 +1,4 @@
-import { createEventService, deleteAnEventService, getAllEventAttendeesService, getAllEventsService, getOneEventFromAttendeeTable, getOneEventService, registerEventService, updateEventDetailsService } from "../services/eventService.js";
+import { createEventService, deRegisterAnAttendeeService, deleteAnEventService, getAllEventAttendeesService, getAllEventsService, getOneEventFromAttendeeTable, getOneEventService, registerEventService, updateEventDetailsService } from "../services/eventService.js";
 import { sendBadRequest, sendCreated, sendDeleteSuccess, sendNotFound, sendServerError, sendSuccess } from "../helpers/helper.function.js";
 import { eventValidator } from "../validators/event.validators.js";
 import logger from "../utils/logger.js";
@@ -226,14 +226,25 @@ export const getAllEventAttendees=async(req,res)=>{
 export const deRegisterAnAttendee=async(req,res)=>{
     try {
 
-        const attendee_id=req.params.attendee_id;
-        const event_id=req.body.event_id;
-        const result=await getAllEventAttendeesService(event_id)
-        
-        console.log(result)
+        const attendee_id=req.user.user_id
+        const event_id=req.params.event_id;
+        const attendee=await getAllEventAttendeesService(event_id)        
+        console.log(attendee)
+        if(attendee[0].attendee_id){
+             const response=await deRegisterAnAttendeeService(event_id,attendee_id)
+            //  return res.status(200).json(response)
+             if(response.rowsAffected){
+                 return res.status(200).json({message:"opted out successfully"})
+             }
+             
+        }
+        else{
+            res.status(404).json({message:"user not found"})
+
+        }
         
         
     } catch (error) {
-        
+        sendServerError(res,error.message)
     }
 }

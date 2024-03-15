@@ -52,12 +52,12 @@ app.use('/photos',photoRouter);
 app.use('/video',videoRouter)
 
 // schedule sending email
-// cron.schedule('*/5 * * * * *', () => {
+cron.schedule('*/5 * * * * *', () => {
 
-//     logger.info("sending email after every five seconds ...............");
-//     sendWelcomeEmailToNewUsers()
+    logger.info("sending email after every five seconds ...............");
+    sendWelcomeEmailToNewUsers()
 
-// });
+});
 
 
 app.listen(port, ()=>{

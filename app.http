@@ -17,7 +17,7 @@ POST http://localhost:3000/api/login
 Content-Type: application/json
 
 {
-   "email":"kwakaba06@gmail.com",
+   "email":"ondiekistephen00@gmail.com",
    "password":"12345678"
 }
 
@@ -126,6 +126,7 @@ Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkz
   "location":"Nairobi"
 }
 
+
 ### get all events
 GET  http://localhost:3000/event
 Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
@@ -159,6 +160,9 @@ Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkz
 GET http://localhost:3000/event/attendees/ba353081-eb57-4af6-bfca-938525a6c592
 Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZjYtMDVkMS00NDFiLTkxZWItNmM0NzVhNGQzZmUxIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDgzNTA0NDgsImV4cCI6MTcwODM1NzY0OH0.ivlFoMRsv00UKxxEgqTvWvIcFv2AAkg5VZLtBuGnPQc
 
+### deregister an attendee
+DELETE http://localhost:3000/event/attendees/00a56cd9-e2a7-4fff-bf3b-4122f2e98c15
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZjNDFlZDEtZWZiMC00M2E5LWE3MjgtYzA4ZDlkNGQ0YjNhIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDk1NTk4MjEsImV4cCI6MTcwOTYwMzAyMX0._4uXcqNZ5ysNUWzq0e06IfgSXE3xmPtHi6encusGvdQ
 ### new message
 
 POST http://localhost:3000/message/new
@@ -168,6 +172,8 @@ Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkz
 {      "content":"Hello",
        "receiver_id":"2b075075-396b-492f-90c7-50aa1668ba3b"
 }
+
+
 
 ###  get messages from a sender
 GET http://localhost:3000/message/295bcb46-7476-4338-896d-6208a3b9601e
@@ -222,7 +228,7 @@ Authorization:JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMmFhOTkzZ
 #######################################################Notification###################################################3
 POST http://localhost:3000/notification/01b4733b-58ca-4129-9300-787d1e527858
 Content-Type: application/json
-Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZjNDFlZDEtZWZiMC00M2E5LWE3MjgtYzA4ZDlkNGQ0YjNhIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDkxMjI0NzAsImV4cCI6MTcwOTE2NTY3MH0.y5BQY2RXYSB9BNcVYR5YE9R7vfgHGrf6Zb92Gxmc3OY
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZjNDFlZDEtZWZiMC00M2E5LWE3MjgtYzA4ZDlkNGQ0YjNhIiwidXNlcm5hbWUiOiJ0ZXN0c2stdXNlckBleGFtcGxlLmNvbSIsImVtYWlsIjoib25kaWVraXN0ZXBoZW4wMEBnbWFpbC5jb20iLCJpYXQiOjE3MDk1ODczNTMsImV4cCI6MTcwOTYzMDU1M30.bl4Cjl1NTgaMyxr__EKKikm9YpzHRge6RG_Qy5LjvIc
  
 ##### get all notifications
 GET http://localhost:3000/notification/

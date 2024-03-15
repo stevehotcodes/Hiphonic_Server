@@ -148,9 +148,10 @@ export const getOneEventFromAttendeeTable=async(event_id)=>{
     }
 }
 
-export const deRegisterAnAttendeeService=async(attendee_id)=>{
+export const deRegisterAnAttendeeService=async(event_id,attendee_id)=>{
     try {
         const response=await poolRequest()
+        .input ('event_id',sql.VarChar,event_id)
         .input('attendee_id',sql.VarChar,attendee_id)
         .query(`DELETE FROM event_attendee WHERE event_id=@event_id`);
         return response
@@ -159,3 +160,4 @@ export const deRegisterAnAttendeeService=async(attendee_id)=>{
         return error
     }
 }
+

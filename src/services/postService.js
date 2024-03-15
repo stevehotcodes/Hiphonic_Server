@@ -29,7 +29,7 @@ export const createPostService=async(post)=>{
         .input("photo_url",sql.VarChar,post.image)
         .input("isProfileImage",sql.Int,0)
         .query(`INSERT INTO photo (photo_id,post_id,user_id,photo_url,isProfileImage)VALUES (@photo_id,@post_id,@user_id, @photo_url,0)`);
-
+v
          // Commit transaction
         await transaction.commit();
 

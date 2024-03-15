@@ -17,6 +17,9 @@ export const createNotification=async(req,res)=>{
            if(response.rowsAffected>0){
               sendCreated(res,'notification created successfully')
            }
+           else{
+            console.log("")
+           }
            
 
     } catch (error) {

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addEventAttendee, createEvent, deleteAnEvent, getAllEventAttendees, getAllEvents, getOneEvent, updateEventDetails } from "../controllers/events.controller.js";
+import { addEventAttendee, createEvent, deRegisterAnAttendee, deleteAnEvent, getAllEventAttendees, getAllEvents, getOneEvent, updateEventDetails } from "../controllers/events.controller.js";
 import {verifyUserIdentity } from "../middlewares/userAuthMiddleware.js";
 
 
@@ -15,7 +15,7 @@ eventRouter.get('/:event_id',verifyUserIdentity,getOneEvent)
 eventRouter.put('/:event_id',verifyUserIdentity,updateEventDetails)
 eventRouter.delete('/:event_id',verifyUserIdentity,deleteAnEvent)
 eventRouter.post('/attendees/:event_id',verifyUserIdentity,addEventAttendee)
-
+eventRouter.delete('/attendees/:event_id',verifyUserIdentity,deRegisterAnAttendee)
 
 
 
